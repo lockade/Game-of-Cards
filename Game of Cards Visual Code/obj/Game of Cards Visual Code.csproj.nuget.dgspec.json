@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj": {}
+  },
+  "projects": {
+    "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj",
+        "projectName": "Game of Cards Visual Code",
+        "projectPath": "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj",
+        "packagesPath": "C:\\Users\\Art e Cia\\.nuget\\packages\\",
+        "outputPath": "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Art e Cia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
