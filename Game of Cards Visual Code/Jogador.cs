@@ -11,12 +11,17 @@ namespace Game_of_Cards
         public int jogosVencidos { get; set; }
         public List<Carta> cartasMao = new List<Carta>();
         public static Baralho baralho = new Baralho();//static para evitar duplicidade de cartas no game!
-
+        
         //Construtor
-        public Jogador(string n)
+        public Jogador()
         {
-            this.nome = n;
+
+            
+            this.nome = Console.ReadLine();
+           
             distribuirCartas();
+
+        
         }
 
         public void distribuirCartas()
@@ -33,6 +38,7 @@ namespace Game_of_Cards
                 
                 baralho.allCards.RemoveAt(indice);
             }
+            
             
             
             /*
@@ -76,5 +82,22 @@ namespace Game_of_Cards
             
         }
 
+
+        public void exibirCarta()
+        {
+            int cont = 1;
+            foreach (Carta x in this.cartasMao)
+            {
+                Console.Write(cont); cont++;
+                if (x is Espada)
+                    Console.WriteLine(" - Nome:{0} | Tipo:{1} | Ataque:{2} | Defesa:{3} | Magia{4} | Resistencia:{5}", x.nome, "Espada", x.ataque, x.defesa, x.magia, x.resistencia);
+
+                else if (x is Machado)
+                    Console.WriteLine(" - Nome:{0} | Tipo:{1} | Ataque:{2} | Defesa:{3} | Magia{4} | Resistencia:{5}", x.nome, "Machado", x.ataque, x.defesa, x.magia, x.resistencia);
+
+                else if (x is Lanca)
+                    Console.WriteLine(" - Nome:{0} | Tipo:{1} | Ataque:{2} | Defesa:{3} | Magia{4} | Resistencia:{5}", x.nome, "Lanca", x.ataque, x.defesa, x.magia, x.resistencia);
+            }
+        }
     }
 }
