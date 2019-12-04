@@ -8,29 +8,26 @@ namespace Game_of_Cards
     {
         static public Carta duelo(Carta a, Carta b, int modoA, int modoB) //MODO FISICO = 0     MODO MAGICO = 1
         {
-
-            int resulA, resulB;
-
             if (modoA == 0)
             {
-                resulA = a.modoFisico(b);
+                a.pontuacaoTemp = a.modoFisico(b);
             }
             else
             {
-                resulA = a.modoMagico(b);
+                a.pontuacaoTemp = a.modoMagico(b);
             }
 
             if (modoB == 0)
             {
-                resulB = b.modoFisico(a);
+                b.pontuacaoTemp = b.modoFisico(a);
             }
             else
             {
-                resulB = b.modoMagico(a);
+                b.pontuacaoTemp = b.modoMagico(a);
             }
 
 
-            if (resulA == resulB)
+            if (a.pontuacaoTemp == b.pontuacaoTemp)
             {
 
                 if (a is Espada)
@@ -68,7 +65,7 @@ namespace Game_of_Cards
                 }
             }
 
-            else if (resulA > resulB)
+            else if (a.pontuacaoTemp > b.pontuacaoTemp)
             {
                 return a;
 
@@ -82,6 +79,7 @@ namespace Game_of_Cards
         public static Carta selecionarCarta(Jogador player)
         {
             Console.WriteLine($"O {player.nome} joga. \nPressione uma tecla para continuar. \n");
+            Console.ReadKey();
             player.exibirCarta();
             Console.WriteLine("Selecione sua carta:");
             bool erro = false; int selecao = 0;
@@ -104,6 +102,7 @@ namespace Game_of_Cards
                 }
             } while (!erro || player.cartasMao.Count < selecao);
             Console.Clear();
+            
             Carta carta = player.cartasMao[selecao - 1];
             player.cartasMao.RemoveAt(selecao -1);
             return carta;
@@ -134,6 +133,24 @@ namespace Game_of_Cards
             }
             Console.Clear();
             return selecao;
+        }
+
+        public static bool continuarPartida(Jogador player1, Jogador player2){
+            if(player1.cartasMao.Count == 0){
+                player2.vitorias++;
+                Console.WriteLine("********************************************************\nTemos um Vencedor ! Parabéns {0} !", player2.nome);
+                return false;
+            }
+            else if(player2.cartasMao.Count == 0){
+                player1.vitorias++;
+                Console.WriteLine("********************************************************\nTemos um Vencedor ! Parabéns {0} !", player1.nome);
+                return false;
+            }
+            return true;
+        }
+
+        public static void teste(Jogador player1){
+            player1.nome = "Rodolfo";
         }
     }
 }

@@ -11,14 +11,15 @@ namespace Game_of_Cards
         public int jogosVencidos { get; set; }
         public List<Carta> cartasMao = new List<Carta>();
         public static Baralho baralho = new Baralho();//static para evitar duplicidade de cartas no game!
-        
+        public int vitorias { get; set;}
+
         //Construtor
         public Jogador()
         {
 
             
             this.nome = Console.ReadLine();
-           
+            this.vitorias = 0;
             distribuirCartas();
 
         
@@ -98,6 +99,11 @@ namespace Game_of_Cards
                 else if (x is Lanca)
                     Console.WriteLine(" - Nome:{0} | Tipo:{1} | Ataque:{2} | Defesa:{3} | Magia{4} | Resistencia:{5}", x.nome, "Lanca", x.ataque, x.defesa, x.magia, x.resistencia);
             }
+        }
+
+        public int qntCartasMao()
+        {
+            return this.cartasMao.Count;
         }
     }
 }

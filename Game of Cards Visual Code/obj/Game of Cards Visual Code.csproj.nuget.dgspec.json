@@ -1,32 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj": {}
+    "C:\\GitProjetos\\Game-of-Cards-master\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj": {}
   },
   "projects": {
-    "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj": {
+    "C:\\GitProjetos\\Game-of-Cards-master\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj",
+        "projectUniqueName": "C:\\GitProjetos\\Game-of-Cards-master\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj",
         "projectName": "Game of Cards Visual Code",
-        "projectPath": "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj",
-        "packagesPath": "C:\\Users\\Art e Cia\\.nuget\\packages\\",
-        "outputPath": "C:\\GitProjetos\\Game-of-Cards\\Game of Cards Visual Code\\obj\\",
+        "projectPath": "C:\\GitProjetos\\Game-of-Cards-master\\Game of Cards Visual Code\\Game of Cards Visual Code.csproj",
+        "packagesPath": "C:\\Users\\Jefferson\\.nuget\\packages\\",
+        "outputPath": "C:\\GitProjetos\\Game-of-Cards-master\\Game of Cards Visual Code\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Art e Cia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Jefferson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -37,12 +39,11 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp2.1": {
           "dependencies": {
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.1.0, )",
               "autoReferenced": true
             }
           },

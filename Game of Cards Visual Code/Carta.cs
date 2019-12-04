@@ -11,6 +11,7 @@ namespace Game_of_Cards
         public int defesa { get; set; }
         public int magia { get; set; }
         public int resistencia { get; set; } 
+        public int pontuacaoTemp { get; set;}
 
         public Carta(string n, int a, int d, int m, int r)
         {
@@ -30,6 +31,15 @@ namespace Game_of_Cards
         public int modoMagico(Carta adversario)
         {
             return this.magia - adversario.resistencia;
+        }
+
+        public static string retornaTipo(Carta a){
+            if(a is Espada)
+                return "Espada";
+            else if(a is Machado)
+                return "Machado";
+            else
+                return "Lança";
         }
 
     }
